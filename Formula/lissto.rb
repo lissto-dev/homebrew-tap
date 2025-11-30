@@ -5,21 +5,21 @@
 class Lissto < Formula
   desc "Lissto CLI - Deploy and manage your stacks on Kubernetes"
   homepage "https://github.com/lissto-dev/cli"
-  version "0.1.2"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lissto-dev/cli/releases/download/v0.1.2/cli_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "27f1857f02c18a49e495dbf51c6a17d7a8a20147f99890810b05c3f78b1a48dc"
+      url "https://github.com/lissto-dev/cli/releases/download/v0.1.4/cli_0.1.4_darwin_amd64.tar.gz"
+      sha256 "f648a2b4aafb7e184ae71873ccaffe26c15c0c43f08821e0b9e40f6625f363e0"
 
       def install
         bin.install "lissto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lissto-dev/cli/releases/download/v0.1.2/cli_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "850e35d0ab83d59487ade6e387b0a9f43688be92ace342823a09c145e951ef3a"
+      url "https://github.com/lissto-dev/cli/releases/download/v0.1.4/cli_0.1.4_darwin_arm64.tar.gz"
+      sha256 "5b458378df0fb1727e159da97fe81f5c18fee41610e2a64c19eb13bd83493152"
 
       def install
         bin.install "lissto"
@@ -29,15 +29,15 @@ class Lissto < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lissto-dev/cli/releases/download/v0.1.2/cli_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "391258b99f76b939d0e9673dd6783193e914dd7cd3264a7c131bbb0f810a5eea"
+      url "https://github.com/lissto-dev/cli/releases/download/v0.1.4/cli_0.1.4_linux_amd64.tar.gz"
+      sha256 "65a5c10256324911be318adbe6b5b32c87482892d0bf64a3bb1a02b255507a2f"
       def install
         bin.install "lissto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lissto-dev/cli/releases/download/v0.1.2/cli_0.1.2_Linux_arm64.tar.gz"
-      sha256 "b7cfaffb7056233c689827cc728f2637f1a7594a65ad471752ee706b505c32b6"
+      url "https://github.com/lissto-dev/cli/releases/download/v0.1.4/cli_0.1.4_linux_arm64.tar.gz"
+      sha256 "40f45c91e55d7ad571e1523699b6fd8f51f907834fc17f15009076537feca285"
       def install
         bin.install "lissto"
       end
