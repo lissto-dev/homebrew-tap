@@ -5,13 +5,13 @@
 class Lissto < Formula
   desc "Lissto CLI - Deploy and manage your stacks on Kubernetes"
   homepage "https://github.com/lissto-dev/cli"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lissto-dev/cli/releases/download/v0.1.5/cli_0.1.5_darwin_amd64.tar.gz"
-      sha256 "f9230036d05c09af8a3fd94f81417f11ce13e9044247cc5e99153887e8754d14"
+      url "https://github.com/lissto-dev/cli/releases/download/v0.1.6/cli_0.1.6_darwin_amd64.tar.gz"
+      sha256 "5a2fb24b43f30c2bb151dd17ded2b945d2f8c3e5ed041a611d9e75f50e3bf566"
 
       def install
         bin.install "lissto"
@@ -19,8 +19,8 @@ class Lissto < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lissto-dev/cli/releases/download/v0.1.5/cli_0.1.5_darwin_arm64.tar.gz"
-      sha256 "3d3ca526cb1d21a53a59452ff9cb02ef3edada72e2619ca8a17f8cd32faa6ab5"
+      url "https://github.com/lissto-dev/cli/releases/download/v0.1.6/cli_0.1.6_darwin_arm64.tar.gz"
+      sha256 "ffa678ee8271b3031957bfd722a29e3d5df9c4bd0c5e4e9adae27930c69cfea8"
 
       def install
         bin.install "lissto"
@@ -31,16 +31,16 @@ class Lissto < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lissto-dev/cli/releases/download/v0.1.5/cli_0.1.5_linux_amd64.tar.gz"
-      sha256 "7db7e863d33760c72ab22324c49950624a35f7f36006a01b483f62d67110b5cf"
+      url "https://github.com/lissto-dev/cli/releases/download/v0.1.6/cli_0.1.6_linux_amd64.tar.gz"
+      sha256 "721e0c4df45aa639b8f1e3ee5091edd4a8034f1a0ed9bb8d941839851025197c"
       def install
         bin.install "lissto"
         generate_completions_from_executable(bin/"lissto", "completion", shells: [:bash, :zsh, :fish])
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lissto-dev/cli/releases/download/v0.1.5/cli_0.1.5_linux_arm64.tar.gz"
-      sha256 "33c9733f5c74fd7bde41eb00356dd307e245d2e3b086513b09380068bcc0da22"
+      url "https://github.com/lissto-dev/cli/releases/download/v0.1.6/cli_0.1.6_linux_arm64.tar.gz"
+      sha256 "0b2fa8fda2c2b8550cef21d013fc2e9726b4a6550e4715cd70a82d79adf79023"
       def install
         bin.install "lissto"
         generate_completions_from_executable(bin/"lissto", "completion", shells: [:bash, :zsh, :fish])
